@@ -37,6 +37,8 @@ Copier.prototype.copyAssets = function(type, assets) {
   var self = this;
   _(assets).each(function(sources, pkg) {
     _(sources).each(function(source) {
+      source = path.resolve(self.options.forcedCopyDir + '/' + source);
+
       var destination;
 
       var isFile = fs.statSync(source).isFile();
