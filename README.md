@@ -161,6 +161,14 @@ An options object passed through to the `bower.install` api, possible options ar
 }
 ```
 
+#### options.forcedCopyDir
+Type: `string`
+Default value: `undefined`
+
+When this value is set it will force the copy function to search for the bower.json in the specified directory as well as search for the installed bower dependencies in the directory.
+
+**NOTE:*** This options should not be needed unless the Gruntfile running the task is in a different directory than the bower.json.
+
 ### Usage Examples
 
 #### Default Options
